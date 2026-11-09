@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilan Café — Order ahead, skip the queue</title>
+  <meta name="description" content="Coffee, food and sweets made to order in Mogadishu. Order ahead for pickup or delivery, pay with EVC Plus or cash.">
+  <meta name="theme-color" content="#0c0d0b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0d0b'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23f4efe5' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/lora-normal-400700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-normal-100900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#menu">Skip to menu</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-head" id="siteHead">
+    <div class="wrap head-inner">
+      <a class="brand" href="#top" aria-label="Bilan Café home">
+        <span class="brand-mark" id="brandMark">B</span>
+        <span class="brand-text">
+          <span class="brand-name" id="brandName">Bilan Café</span>
+          <span class="brand-city" id="brandCity">Mogadishu</span>
+        </span>
+      </a>
+
+      <nav class="desk-nav" aria-label="Main">
+        <a href="#menu">Menu</a>
+        <a href="#room">Our room</a>
+        <a href="#how">How it works</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <div class="head-actions">
+        <span class="open-pill" id="openPill"><i aria-hidden="true"></i><span id="openLabel">Open</span></span>
+        <button class="cart-btn" id="cartBtn" type="button" aria-controls="cart" aria-expanded="false">
+          <span>Order</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#menu">Menu</a>
+      <a href="#room">Our room</a>
+      <a href="#how">How it works</a>
+      <a href="#visit">Visit</a>
+      <a class="mobile-order" href="#menu" id="mobileOrderLink">Start an order</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/img/cafe/hero-beans.jpg" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="wrap hero-inner">
+        <p class="eyebrow hero-eyebrow"><span class="dot" aria-hidden="true"></span><span id="heroPlace">Mogadishu</span> · Order ahead</p>
+        <h1 class="hero-title" id="heroTitle">
+          <span>Slow coffee.</span>
+          <em>Fast orders.</em>
+        </h1>
+        <p class="hero-lead" id="heroLead">Coffee, food and sweets made to order. Order ahead, skip the queue, and pick it up warm.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#menu">Order now</a>
+          <a class="btn btn-ghost" href="#visit">Find us</a>
+        </div>
+        <dl class="hero-meta">
+          <div><dt>Hours</dt><dd id="heroHours">Open daily · 7:00 – 23:00</dd></div>
+          <div><dt>Delivery</dt><dd id="heroPrep">20–30 min</dd></div>
+          <div><dt>Payment</dt><dd>EVC Plus &amp; cash</dd></div>
+        </dl>
+      </div>
+
+      <a class="scroll-hint" href="#menu" aria-label="Scroll to menu">
+        <span>Scroll</span><i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Fresh roast</span><span class="sep">·</span>
+        <span>Made to order</span><span class="sep">·</span>
+        <span>Pickup in 10</span><span class="sep">·</span>
+        <span>Delivery in 30</span><span class="sep">·</span>
+        <span>EVC accepted</span><span class="sep">·</span>
+        <span>Fresh roast</span><span class="sep">·</span>
+        <span>Made to order</span><span class="sep">·</span>
+        <span>Pickup in 10</span><span class="sep">·</span>
+        <span>Delivery in 30</span><span class="sep">·</span>
+        <span>EVC accepted</span><span class="sep">·</span>
+      </div>
+    </div>
+
+    <section class="section menu-section" id="menu">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">The menu</p>
+            <h2 class="reveal">Everything made <em>to order.</em></h2>
+          </div>
+          <div class="menu-tools reveal">
+            <label class="search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+              <span class="sr-only">Search the menu</span>
+              <input id="searchInput" type="search" placeholder="Search the menu" autocomplete="off">
+            </label>
+            <span class="menu-count" id="menuCount" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="featured" id="featured" aria-label="House favourites"></div>
+
+        <div class="filters" id="filters" role="toolbar" aria-label="Menu categories"></div>
+        <div class="menu-grid" id="menuGrid"></div>
+        <p class="menu-empty" id="menuEmpty" hidden>Nothing matches that search. Try a shorter word.</p>
+      </div>
+    </section>
+
+    <section class="section room" id="room">
+      <div class="wrap room-grid">
+        <div class="room-media reveal">
+          <img src="assets/img/cafe/the-room.jpg" alt="Arched café ceiling with warm pendant lights" loading="lazy">
+          <span class="room-tag">The room</span>
+        </div>
+        <div class="room-copy">
+          <p class="eyebrow reveal">Our room</p>
+          <h2 class="reveal">Stay for <em>one more cup.</em></h2>
+          <p class="reveal" id="aboutText">A neighbourhood room for long conversations, honest coffee and food made the same morning.</p>
+          <ul class="room-facts reveal">
+            <li><span>Hours</span><b id="hoursFact">7:00 – 23:00</b></li>
+            <li><span>Delivery area</span><b id="deliveryFact">Hodan and nearby</b></li>
+            <li><span>Payment</span><b>EVC Plus · Cash</b></li>
+          </ul>
+          <a class="link-arrow reveal" href="#visit">Come see us
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="how">
+      <div class="wrap">
+        <p class="eyebrow reveal">How it works</p>
+        <div class="how-head">
+          <h2 class="reveal">Three steps. <em>No queue.</em></h2>
+          <p class="reveal">Order from your phone, pay the way you already pay, and we’ll have it ready.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-no">01</span>
+            <h3>Build your order</h3>
+            <p>Pick from the menu and add it to your cart. Minimum order is <span id="minOrderFact">$5</span>.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-no">02</span>
+            <h3>Choose pickup or delivery</h3>
+            <p>Delivery is <span id="feeFact">$1.50</span>, free over <span id="freeFact">$15</span>. Pickup is always free.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-no">03</span>
+            <h3>Pay and track</h3>
+            <p>Send the total by EVC Plus, or pay cash. You’ll get an order number and a WhatsApp receipt.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section visit" id="visit">
+      <div class="wrap visit-grid">
+        <div class="visit-copy">
+          <p class="eyebrow reveal">Visit</p>
+          <h2 class="reveal" id="visitTitle">Hodan, Mogadishu</h2>
+          <address class="reveal" id="visitAddress">Makka Al Mukarama Road, Hodan<br>Mogadishu, Somalia</address>
+          <p class="visit-hours reveal" id="visitHours">Open daily · 7:00 – 23:00</p>
+          <div class="visit-actions reveal">
+            <a class="btn btn-dark" id="mapsLink" href="#" target="_blank" rel="noopener">Open in Maps</a>
+            <a class="btn btn-line" id="callLink" href="#">Call us</a>
+          </div>
+          <p class="visit-note reveal">Ordering for a group? Message us on WhatsApp and we’ll plan it with you.</p>
+        </div>
+        <div class="map reveal">
+          <div class="map-fallback">
+            <span class="map-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+            </span>
+            <p id="mapFallbackName">Bilan Café</p>
+            <address id="mapFallbackAddress">Makka Al Mukarama Road, Hodan<br>Mogadishu, Somalia</address>
+            <small>Open in Maps for directions</small>
+          </div>
+          <iframe id="mapFrame" title="Map to Bilan Café" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-top">
+      <div class="foot-brand">
+        <span class="brand-mark" id="footMark">B</span>
+        <p id="footName">Bilan Café</p>
+        <span id="footTagline">Slow coffee. Fast orders.</span>
+      </div>
+      <div class="foot-links">
+        <a href="#menu">Menu</a>
+        <a href="#room">Our room</a>
+        <a href="#how">How it works</a>
+        <a href="#visit">Visit</a>
+        <a href="/dashboard">Staff login</a>
+      </div>
+      <div class="foot-contact">
+        <a id="footPhone" href="tel:+252610000000">+252 61 000 0000</a>
+        <a id="footEmail" href="mailto:hello@bilancafe.so">hello@bilancafe.so</a>
+        <a id="footWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <p>© <span id="year">2026</span> <span id="footName2">Bilan Café</span>. All rights reserved.</p>
+      <p class="credits">Demo photography: Wikimedia Commons — Coffee Beans macro 1 (CC BY 3.0), Café Central Vienna (CC0), A cup of coffee in Mohk (CC BY-SA 4.0), Frappé (CC BY-SA 4.0). Replace with your own photos before launch.</p>
+    </div>
+  </footer>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <aside class="cart" id="cart" aria-label="Your order" aria-hidden="true">
+    <div class="cart-head">
+      <div>
+        <p class="eyebrow">Your order</p>
+        <h2>Basket</h2>
+      </div>
+      <button class="icon-btn" id="cartClose" type="button" aria-label="Close basket">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot" id="cartFoot">
+      <div class="cart-line"><span>Subtotal</span><b id="cartSubtotal">$0.00</b></div>
+      <div class="cart-line muted"><span>Delivery</span><span id="cartDelivery">from $1.50</span></div>
+      <p class="cart-hint" id="cartHint"></p>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" type="button">Checkout</button>
+      <p class="cart-fine">Pay with EVC Plus or cash.</p>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkoutModal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="icon-btn modal-close" id="modalClose" type="button" aria-label="Close checkout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+      </button>
+
+      <div id="checkoutFormView">
+        <p class="eyebrow">Checkout</p>
+        <h2 id="checkoutTitle">Where should we send it?</h2>
+
+        <form id="checkoutForm" novalidate>
+          <div class="field-row">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" id="custName" type="text" autocomplete="name" placeholder="Your name" required>
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input name="phone" id="custPhone" type="tel" autocomplete="tel" placeholder="+252 61 ..." required>
+            </label>
+          </div>
+
+          <fieldset class="choice">
+            <legend>How do you want it?</legend>
+            <div class="choice-row">
+              <label class="choice-opt">
+                <input type="radio" name="fulfilment" value="delivery" checked>
+                <span><b>Delivery</b><small id="choiceDelivery">20–30 min</small></span>
+              </label>
+              <label class="choice-opt">
+                <input type="radio" name="fulfilment" value="pickup">
+                <span><b>Pickup</b><small>Ready in ~10 min</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="field" id="addressField">
+            <span>Delivery address</span>
+            <input name="address" id="custAddress" type="text" autocomplete="street-address" placeholder="Street, district, landmark">
+          </label>
+
+          <fieldset class="choice">
+            <legend>Payment</legend>
+            <div class="choice-row">
+              <label class="choice-opt">
+                <input type="radio" name="payment" value="evc" checked>
+                <span><b>EVC Plus</b><small id="evcHint">Send before delivery</small></span>
+              </label>
+              <label class="choice-opt">
+                <input type="radio" name="payment" value="cash">
+                <span><b>Cash</b><small id="cashHint">Pay on delivery</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span>Note for the kitchen <em>(optional)</em></span>
+            <textarea name="note" id="custNote" rows="2" placeholder="Less sugar, extra napkins…"></textarea>
+          </label>
+
+          <div class="checkout-summary" id="checkoutSummary"></div>
+          <p class="form-error" id="formError" role="alert" hidden></p>
+
+          <button class="btn btn-primary btn-block" id="placeOrderBtn" type="submit">Place order</button>
+          <p class="form-fine">By ordering you agree to be contacted on the number above.</p>
+        </form>
+      </div>
+
+      <div id="successView" hidden>
+        <p class="eyebrow">Order received</p>
+        <h2>Thank you, <span id="successName">friend</span>.</h2>
+        <p class="success-lead" id="successLead"></p>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span>Order</span>
+            <b id="successId">B-1001</b>
+          </div>
+          <dl class="ticket-lines" id="ticketLines"></dl>
+          <div class="ticket-total"><span>Total</span><b id="successTotal">$0.00</b></div>
+        </div>
+
+        <div class="pay-box" id="payBox">
+          <p><b>Send <span id="payAmount">$0.00</span></b> to <span id="payNumber">61 000 0000</span> (<span id="payName">Bilan Café</span>).</p>
+          <p>Use <b id="payRef">B-1001</b> as the reference.</p>
+          <button class="copy-btn" id="copyPay" type="button">Copy payment details</button>
+        </div>
+        <p class="success-note" id="successNote"></p>
+
+        <div class="success-actions">
+          <a class="btn btn-primary" id="whatsappBtn" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <button class="btn btn-line" id="newOrderBtn" type="button">Order something else</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="mobile-bar" id="mobileBar" type="button" hidden>
+    <span id="mobileBarCount">0 items</span>
+    <span class="mobile-bar-total" id="mobileBarTotal">$0.00</span>
+    <span class="mobile-bar-go">View order</span>
+  </button>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

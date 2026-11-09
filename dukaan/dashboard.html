@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Orders — Bilan Café</title>
+  <meta name="theme-color" content="#0b0c09">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c09'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23f5f0e6' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/inter-normal-100900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <section class="gate" id="gate">
+    <div class="gate-card">
+      <div class="brand">
+        <span class="brand-mark" id="gateMark">B</span>
+        <span class="brand-text">
+          <span id="gateName">Bilan Café</span>
+          <small>Staff dashboard</small>
+        </span>
+      </div>
+      <h1>Orders, live.</h1>
+      <p class="gate-lead">Enter the staff PIN to see today’s orders.</p>
+      <form id="pinForm" autocomplete="off">
+        <label class="pin-field">
+          <span>PIN</span>
+          <input id="pinInput" type="password" inputmode="numeric" autocomplete="current-password" placeholder="••••" maxlength="24" required>
+        </label>
+        <p class="gate-error" id="gateError" role="alert" hidden></p>
+        <button class="btn btn-primary btn-block" type="submit" id="gateBtn">Open dashboard</button>
+      </form>
+      <a class="gate-back" href="/">← Back to the storefront</a>
+    </div>
+  </section>
+
+  <div class="dash" id="dash" hidden>
+    <header class="dash-head">
+      <div class="wrap head-inner">
+        <a class="brand" href="/" aria-label="View storefront">
+          <span class="brand-mark" id="dashMark">B</span>
+          <span class="brand-text">
+            <span id="dashName">Bilan Café</span>
+            <small>Orders</small>
+          </span>
+        </a>
+        <div class="head-right">
+          <span class="live" id="live"><i aria-hidden="true"></i><span id="liveLabel">Live</span></span>
+          <button class="ghost-btn" id="soundBtn" type="button" aria-pressed="true">Sound on</button>
+          <button class="ghost-btn" id="refreshBtn" type="button">Refresh</button>
+          <a class="ghost-btn" href="/" target="_blank" rel="noopener">Storefront</a>
+          <button class="ghost-btn" id="lockBtn" type="button">Lock</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap dash-main">
+      <div class="dash-title">
+        <div>
+          <p class="eyebrow">Orders</p>
+          <h1 id="pageTitle">Today, at a glance.</h1>
+        </div>
+        <p class="updated" id="updated">Loading…</p>
+      </div>
+
+      <section class="kpis" aria-label="Summary">
+        <article class="kpi">
+          <span>Orders</span>
+          <b id="kpiOrders">0</b>
+          <small id="kpiOrdersSub">today</small>
+        </article>
+        <article class="kpi">
+          <span>Revenue</span>
+          <b id="kpiRevenue">$0.00</b>
+          <small>cancellations excluded</small>
+        </article>
+        <article class="kpi">
+          <span>Open now</span>
+          <b id="kpiOpen">0</b>
+          <small>new · preparing · ready · out</small>
+        </article>
+        <article class="kpi">
+          <span>Average order</span>
+          <b id="kpiAvg">$0.00</b>
+          <small>non-cancelled orders</small>
+        </article>
+      </section>
+
+      <div class="toolbar">
+        <div class="chips" id="statusChips" role="toolbar" aria-label="Filter by status"></div>
+        <div class="tool-right">
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+            <span class="sr-only">Search orders</span>
+            <input id="searchInput" type="search" placeholder="Order, name or phone" autocomplete="off">
+          </label>
+          <label class="range">
+            <span class="sr-only">Date range</span>
+            <select id="rangeSelect">
+              <option value="today">Today</option>
+              <option value="week">Last 7 days</option>
+              <option value="all">All time</option>
+            </select>
+          </label>
+          <button class="ghost-btn" id="exportBtn" type="button">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="orders" id="orders" aria-live="polite"></div>
+      <p class="empty" id="empty" hidden>
+        <b>No orders yet.</b>
+        <span>Orders placed on the storefront appear here within a few seconds.</span>
+      </p>
+      <p class="dash-foot">Menu and prices live in <code>assets/data/shop.json</code>. Orders are stored in <code>data/orders.json</code>.</p>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

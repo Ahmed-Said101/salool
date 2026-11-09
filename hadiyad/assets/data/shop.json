@@ -1,0 +1,219 @@
+{
+  "_demo": "Demo template for U Dir Hadiyad. Replace brand, contacts, delivery zones, prices and photos before going live.",
+  "brand": {
+    "name": "U Dir Hadiyad",
+    "initial": "H",
+    "tagline": "From anywhere. To the people you love.",
+    "city": "Mogadishu",
+    "about": "A gifting concierge for Somalis abroad. Choose something thoughtful, write a message, and our team in Mogadishu delivers it to your family's door — then calls you with a photo when it arrives."
+  },
+  "contact": {
+    "whatsapp": "252610000000",
+    "phoneDisplay": "+252 61 000 0000",
+    "evcNumber": "61 000 0000",
+    "evcName": "U Dir Hadiyad",
+    "email": "hello@hadiyad.so",
+    "dashboardPin": "1357"
+  },
+  "ordering": {
+    "currency": "$",
+    "deliveryFee": 2,
+    "freeDeliveryOver": 60,
+    "minOrder": 10,
+    "prepTime": "2–4 hours",
+    "sameDayCutoff": "15:00",
+    "maxDaysAhead": 60,
+    "delivery": true,
+    "pickup": false,
+    "deliveryArea": "Hodan, Wadajir, Hamar Weyne, Abdiaziz, Daynile and nearby",
+    "slots": [
+      { "id": "morning", "label": "Morning", "time": "8:00 – 12:00" },
+      { "id": "afternoon", "label": "Afternoon", "time": "12:00 – 16:00" },
+      { "id": "evening", "label": "Evening", "time": "16:00 – 20:00" }
+    ],
+    "zones": [
+      { "id": "hodan", "name": "Hodan", "fee": 2 },
+      { "id": "wadajir", "name": "Wadajir", "fee": 2 },
+      { "id": "hamar-weyne", "name": "Hamar Weyne", "fee": 2 },
+      { "id": "abdiaziz", "name": "Abdiaziz", "fee": 2 },
+      { "id": "daynile", "name": "Daynile", "fee": 3 },
+      { "id": "kahda", "name": "Kahda", "fee": 3 },
+      { "id": "other", "name": "Other Mogadishu area", "fee": 4 }
+    ]
+  },
+  "hours": {
+    "label": "Deliveries daily · 8:00 – 20:00",
+    "open": "08:00",
+    "close": "20:00"
+  },
+  "location": {
+    "address": "Makka Al Mukarama Road, Hodan",
+    "city": "Mogadishu, Somalia",
+    "mapsQuery": "Hodan District, Mogadishu, Somalia"
+  },
+  "categories": [
+    { "id": "flowers", "name": "Flowers" },
+    { "id": "cakes", "name": "Cakes & sweets" },
+    { "id": "fruit", "name": "Fruit & dates" },
+    { "id": "coffee", "name": "Coffee & tea" },
+    { "id": "keepsakes", "name": "Keepsakes" }
+  ],
+  "occasions": [
+    { "id": "birthday", "name": "Birthday" },
+    { "id": "wedding", "name": "Wedding" },
+    { "id": "eid", "name": "Eid & Ramadan" },
+    { "id": "new-baby", "name": "New baby" },
+    { "id": "thank-you", "name": "Thank you" },
+    { "id": "get-well", "name": "Get well" }
+  ],
+  "products": [
+    {
+      "id": "red-roses",
+      "name": "Twelve Red Roses",
+      "category": "flowers",
+      "price": 25,
+      "img": "gifts/roses.jpg",
+      "badge": "Most sent",
+      "desc": "A full wrap of deep red roses, hand-tied with ribbon and a handwritten card.",
+      "occasions": ["birthday", "wedding", "thank-you"]
+    },
+    {
+      "id": "seasonal-bouquet",
+      "name": "Seasonal Bouquet",
+      "category": "flowers",
+      "price": 30,
+      "img": "gifts/bouquet.jpg",
+      "badge": "Florist's choice",
+      "desc": "Bright seasonal flowers arranged on the morning of delivery by our Hodan florist.",
+      "occasions": ["birthday", "thank-you", "get-well"]
+    },
+    {
+      "id": "rose-cupcake-box",
+      "name": "Rose Cupcake Box",
+      "category": "cakes",
+      "price": 15,
+      "img": "gifts/rosebox.jpg",
+      "desc": "Six cupcakes piped as roses in chocolate and vanilla, packed in a ribboned box.",
+      "occasions": ["birthday", "wedding"]
+    },
+    {
+      "id": "chocolate-rose-cake",
+      "name": "Chocolate Rose Cake",
+      "category": "cakes",
+      "price": 22,
+      "img": "gifts/choccake.jpg",
+      "badge": "Birthday favourite",
+      "desc": "Dark chocolate cake finished with cream roses. Serves eight.",
+      "occasions": ["birthday", "eid"]
+    },
+    {
+      "id": "red-velvet-box",
+      "name": "Red Velvet Box",
+      "category": "cakes",
+      "price": 18,
+      "img": "gifts/redvelvet.jpg",
+      "desc": "Six slices of red velvet with cream cheese frosting, boxed for sharing.",
+      "occasions": ["birthday", "thank-you"]
+    },
+    {
+      "id": "celebration-cupcakes",
+      "name": "Celebration Cupcakes",
+      "category": "cakes",
+      "price": 14,
+      "img": "gifts/cupcakes.jpg",
+      "desc": "Six buttercream cupcakes in mixed colours, packed in a gift box.",
+      "occasions": ["birthday", "new-baby"]
+    },
+    {
+      "id": "belgian-chocolate-box",
+      "name": "Belgian Chocolate Box",
+      "category": "cakes",
+      "price": 20,
+      "img": "gifts/chocbox.jpg",
+      "desc": "An assorted box of pralines and filled chocolates, wrapped and ready to give.",
+      "occasions": ["thank-you", "eid", "wedding"]
+    },
+    {
+      "id": "macaron-box",
+      "name": "Macaron Box",
+      "category": "cakes",
+      "price": 18,
+      "img": "gifts/macarons.jpg",
+      "desc": "Twelve macarons in seasonal flavours, arranged in a keepsake box.",
+      "occasions": ["wedding", "birthday"]
+    },
+    {
+      "id": "medina-dates",
+      "name": "Medina Dates Box",
+      "category": "fruit",
+      "price": 16,
+      "img": "gifts/dates.jpg",
+      "desc": "Soft Medjool-style dates packed in a gift box. A steady favourite for Ramadan.",
+      "occasions": ["eid", "get-well"]
+    },
+    {
+      "id": "family-fruit-basket",
+      "name": "Family Fruit Basket",
+      "category": "fruit",
+      "price": 28,
+      "img": "gifts/fruitbasket.jpg",
+      "badge": "For the whole house",
+      "desc": "A generous basket of seasonal fruit, arranged and wrapped by hand.",
+      "occasions": ["get-well", "thank-you", "eid"]
+    },
+    {
+      "id": "mango-crate",
+      "name": "Mango Crate",
+      "category": "fruit",
+      "price": 15,
+      "img": "gifts/mango.jpg",
+      "desc": "A crate of ripe Somali mangoes, chosen from the morning market.",
+      "occasions": ["get-well", "eid", "thank-you"]
+    },
+    {
+      "id": "fresh-coffee-blend",
+      "name": "Fresh Coffee Blend",
+      "category": "coffee",
+      "price": 14,
+      "img": "gifts/coffee.jpg",
+      "desc": "Freshly roasted beans, ground to order and sealed in a gift bag.",
+      "occasions": ["thank-you", "eid"]
+    },
+    {
+      "id": "tea-house-set",
+      "name": "Tea House Set",
+      "category": "coffee",
+      "price": 24,
+      "img": "gifts/tea.jpg",
+      "desc": "Loose-leaf tea with a traditional pot and cups, for long afternoons.",
+      "occasions": ["wedding", "thank-you", "new-baby"]
+    },
+    {
+      "id": "oud-candle",
+      "name": "Oud Candle",
+      "category": "keepsakes",
+      "price": 17,
+      "img": "gifts/candle.jpg",
+      "desc": "A warm oud and teak candle in a glass jar that stays on the shelf long after.",
+      "occasions": ["new-baby", "thank-you"]
+    },
+    {
+      "id": "tasbih-set",
+      "name": "Tasbih & Du'a Set",
+      "category": "keepsakes",
+      "price": 12,
+      "img": "gifts/tasbih.jpg",
+      "desc": "A carved tasbih with a small du'a card, wrapped simply and thoughtfully.",
+      "occasions": ["eid", "get-well"]
+    },
+    {
+      "id": "new-baby-booties",
+      "name": "New Baby Booties",
+      "category": "keepsakes",
+      "price": 19,
+      "img": "gifts/baby2.jpg",
+      "desc": "Hand-knitted booties for a new arrival, delivered with a card from you.",
+      "occasions": ["new-baby"]
+    }
+  ]
+}

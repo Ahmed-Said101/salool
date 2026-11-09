@@ -1,0 +1,68 @@
+{
+  "_demo": "Demo template. Replace brand, contact numbers, EVC account and products before going live.",
+  "brand": {
+    "name": "Bilan Café",
+    "initial": "B",
+    "tagline": "Slow coffee. Fast orders.",
+    "city": "Mogadishu",
+    "about": "A neighbourhood room for long conversations, honest coffee and food made the same morning. Order ahead, skip the queue, and pick it up warm."
+  },
+  "contact": {
+    "whatsapp": "252610000000",
+    "phoneDisplay": "+252 61 000 0000",
+    "evcNumber": "61 000 0000",
+    "evcName": "Bilan Café",
+    "email": "hello@bilancafe.so",
+    "dashboardPin": "2468"
+  },
+  "ordering": {
+    "currency": "$",
+    "deliveryFee": 1.5,
+    "freeDeliveryOver": 15,
+    "minOrder": 5,
+    "prepTime": "20–30 min",
+    "delivery": true,
+    "pickup": true,
+    "deliveryArea": "Hodan, Wadajir, Hamar Weyne and nearby"
+  },
+  "hours": {
+    "label": "Open daily · 7:00 – 23:00",
+    "open": "07:00",
+    "close": "23:00"
+  },
+  "location": {
+    "address": "Makka Al Mukarama Road, Hodan",
+    "city": "Mogadishu, Somalia",
+    "mapsQuery": "Hodan District, Mogadishu, Somalia"
+  },
+  "categories": [
+    { "id": "coffee", "name": "Coffee" },
+    { "id": "iced", "name": "Iced" },
+    { "id": "food", "name": "Food" },
+    { "id": "sweets", "name": "Sweets" }
+  ],
+  "products": [
+    { "id": "espresso", "name": "Espresso", "desc": "Double shot, house blend", "price": 2.0, "cat": "coffee" },
+    { "id": "cortado", "name": "Cortado", "desc": "Equal parts coffee and milk", "price": 2.75, "cat": "coffee" },
+    { "id": "flat-white", "name": "Flat White", "desc": "Velvet milk, strong base", "price": 3.5, "cat": "coffee", "badge": "Bestseller", "img": "assets/img/products/flat-white.jpg" },
+    { "id": "cappuccino", "name": "Cappuccino", "desc": "Foamed milk, cocoa dust", "price": 3.25, "cat": "coffee" },
+    { "id": "latte", "name": "Latte", "desc": "Smooth and long", "price": 3.5, "cat": "coffee" },
+    { "id": "mocha", "name": "Mocha", "desc": "Chocolate, espresso, milk", "price": 4.0, "cat": "coffee" },
+    { "id": "pour-over", "name": "V60 Pour Over", "desc": "Single origin, brewed to order", "price": 4.25, "cat": "coffee" },
+
+    { "id": "iced-latte", "name": "Iced Latte", "desc": "Double shot over ice", "price": 4.0, "cat": "iced" },
+    { "id": "iced-americano", "name": "Iced Americano", "desc": "Clean, cold, no sugar", "price": 3.5, "cat": "iced" },
+    { "id": "frappe", "name": "Coffee Frappé", "desc": "Blended, thick, cold", "price": 4.5, "cat": "iced", "badge": "Bestseller", "img": "assets/img/products/iced-frappe.jpg" },
+    { "id": "cold-brew", "name": "Cold Brew", "desc": "Steeped 16 hours", "price": 4.25, "cat": "iced" },
+    { "id": "mango-tea", "name": "Mango Iced Tea", "desc": "Black tea, mango, lime", "price": 3.75, "cat": "iced" },
+
+    { "id": "croissant", "name": "Butter Croissant", "desc": "Baked at 6am", "price": 3.0, "cat": "food" },
+    { "id": "egg-toast", "name": "Egg & Cheese Toast", "desc": "Soft eggs, melted cheese", "price": 5.5, "cat": "food" },
+    { "id": "chicken-wrap", "name": "Chicken Wrap", "desc": "Grilled chicken, garlic sauce", "price": 6.5, "cat": "food" },
+    { "id": "avocado-toast", "name": "Avocado Toast", "desc": "Sourdough, chili, lime", "price": 6.0, "cat": "food" },
+
+    { "id": "carrot-cake", "name": "Carrot Cake", "desc": "Cream cheese frosting", "price": 4.0, "cat": "sweets" },
+    { "id": "brownie", "name": "Chocolate Brownie", "desc": "Dense, warm, sea salt", "price": 3.75, "cat": "sweets" },
+    { "id": "pistachio-cookie", "name": "Pistachio Cookie", "desc": "Chewy, roasted nuts", "price": 2.5, "cat": "sweets" }
+  ]
+}

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U Dir Hadiyad — Send a gift to Mogadishu</title>
+<meta name="description" content="Choose a gift, write a message, and our team in Mogadishu delivers it to your family's door with photo proof and a call back. Built for the Somali diaspora.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23241a1f'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23f7efe7' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#gifts">Skip to the gifts</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" id="brandInitial">H</span>
+      <span class="brand-text">
+        <strong id="brandName">U Dir Hadiyad</strong>
+        <span class="brand-city" id="brandCity">Mogadishu</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#gifts">Gifts</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#how">How it works</a>
+      <a href="#areas">Areas</a>
+      <a href="#track">Track</a>
+      <a href="#visit">Contact</a>
+    </nav>
+
+    <div class="head-actions">
+      <span class="open-pill" id="openPill"><i></i><span>Open now</span></span>
+      <button class="btn btn-rose cart-btn" id="cartBtn" aria-expanded="false" aria-controls="cart">
+        <span>Gift box</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#gifts">Gifts</a>
+    <a href="#occasions">Occasions</a>
+    <a href="#how">How it works</a>
+    <a href="#areas">Areas</a>
+    <a href="#track">Track an order</a>
+    <a href="#visit">Contact</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero-media">
+      <img src="assets/img/scene/hero-gift.jpg" alt="A woman holding a fresh bouquet of tulips" fetchpriority="high">
+      <span class="hero-shade"></span>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><i></i><span id="heroEyebrow">Muqdisho · Same-day gifting</span></p>
+      <h1 class="hero-title" id="heroTitle"><span>From anywhere.</span><em>To the people you love.</em></h1>
+      <p class="hero-lead" id="heroLead">Order from London, Minneapolis or Dubai. We buy it fresh in Mogadishu, wrap it, hand-deliver it, and send you a photo the moment it lands in their hands.</p>
+      <div class="hero-actions">
+        <a class="btn btn-rose btn-lg" href="#gifts" id="heroShop">Choose a gift</a>
+        <a class="btn btn-glass btn-lg" href="#how">How it works</a>
+      </div>
+      <dl class="hero-meta">
+        <div>
+          <dt>Cut-off</dt>
+          <dd id="cutoffFact">Same-day before 15:00</dd>
+        </div>
+        <div>
+          <dt>Proof</dt>
+          <dd>Photo on delivery</dd>
+        </div>
+        <div>
+          <dt>Payment</dt>
+          <dd id="paymentFact">Card link or EVC</dd>
+        </div>
+      </dl>
+    </div>
+    <a class="scroll-hint" href="#occasions"><span></span>Scroll</a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Fresh flowers</span><i>·</i><span>Cakes &amp; sweets</span><i>·</i><span>Dates &amp; fruit baskets</span><i>·</i><span>Handwritten card</span><i>·</i><span>Photo proof</span><i>·</i><span>WhatsApp updates</span><i>·</i>
+      <span>Fresh flowers</span><i>·</i><span>Cakes &amp; sweets</span><i>·</i><span>Dates &amp; fruit baskets</span><i>·</i><span>Handwritten card</span><i>·</i><span>Photo proof</span><i>·</i><span>WhatsApp updates</span><i>·</i>
+    </div>
+  </div>
+
+  <section class="section occasions" id="occasions">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow"><i></i><span>Why are you sending?</span></p>
+          <h2 class="reveal">Pick the moment, we'll match the gift.</h2>
+        </div>
+        <p class="section-note reveal">Every gift below is packed by hand in Mogadishu and delivered with a card in your words. Choose an occasion to narrow the list.</p>
+      </div>
+      <div class="occasion-row reveal" id="occasionChips"></div>
+    </div>
+  </section>
+
+  <section class="section gifts" id="gifts">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow"><i></i><span>The gift list</span></p>
+          <h2>Everything, ready to send.</h2>
+        </div>
+        <p class="section-note reveal">Prices are in US dollars and include the gift, wrapping and the card. Delivery is calculated by area at checkout.</p>
+      </div>
+
+      <div class="menu-tools reveal">
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+          <input type="search" id="searchInput" placeholder="Search roses, cake, dates…" aria-label="Search gifts">
+        </label>
+        <div class="filters" id="categoryChips"></div>
+      </div>
+
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <div class="gift-grid" id="giftGrid"></div>
+      <p class="empty-line" id="giftEmpty" hidden>No gifts match that search. Try another word or clear the filters.</p>
+    </div>
+  </section>
+
+  <section class="section how" id="how">
+    <div class="wrap">
+      <div class="how-head reveal">
+        <p class="eyebrow"><i></i><span>How it works</span></p>
+        <h2>Three steps, and it's at their door.</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal">
+          <span class="step-no">01</span>
+          <h3>Choose and schedule</h3>
+          <p>Pick a gift, add your message, and choose the day and window that suits them — birthdays, Eid mornings, a surprise Tuesday.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-no">02</span>
+          <h3>We confirm by phone</h3>
+          <p>Our team calls the recipient to agree on a time, so nobody misses the delivery and the gift arrives when they're actually home.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-no">03</span>
+          <h3>Delivered, with proof</h3>
+          <p>The courier hands it over, photographs it, and messages you on WhatsApp. You see their face even from six thousand miles away.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section areas" id="areas">
+    <div class="wrap areas-grid">
+      <div>
+        <p class="eyebrow reveal"><i></i><span>Delivery areas</span></p>
+        <h2 class="reveal">Mogadishu, district by district.</h2>
+        <p class="areas-lead reveal">Same-day orders close at <b id="cutoffInline">15:00</b>. After that we book the next day. Anything over <b id="freeFact">$60</b> delivers free.</p>
+        <ul class="zone-list reveal" id="zoneList"></ul>
+      </div>
+      <div class="slot-card reveal">
+        <h3>Delivery windows</h3>
+        <ul id="slotList"></ul>
+        <p class="slot-foot">Need a specific hour — before a wedding, after Asr? Write it in the note and we'll match it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section track" id="track">
+    <div class="wrap track-grid">
+      <div>
+        <p class="eyebrow reveal"><i></i><span>Track</span></p>
+        <h2 class="reveal">Where is my gift?</h2>
+        <p class="track-lead reveal">Use the order number from your confirmation, with the phone number you ordered with.</p>
+        <form class="track-form reveal" id="trackForm" novalidate>
+          <label class="field">
+            <span>Order number</span>
+            <input type="text" id="trackId" placeholder="H-1001" autocomplete="off" required>
+          </label>
+          <label class="field">
+            <span>Phone</span>
+            <input type="tel" id="trackPhone" placeholder="+252 61 …" autocomplete="tel" required>
+          </label>
+          <button class="btn btn-dark" type="submit" id="trackBtn">Track order</button>
+          <p class="form-error" id="trackError" hidden></p>
+        </form>
+      </div>
+      <div class="track-result" id="trackResult" hidden></div>
+    </div>
+  </section>
+
+  <section class="section visit" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-copy">
+        <p class="eyebrow reveal"><i></i><span>Visit the workshop</span></p>
+        <h2 class="reveal" id="visitTitle">Hodan, Mogadishu</h2>
+        <address class="reveal" id="visitAddress">Makka Al Mukarama Road, Hodan<br>Mogadishu, Somalia</address>
+        <p class="visit-hours reveal" id="visitHours">Deliveries daily · 8:00 – 20:00</p>
+        <div class="visit-actions reveal">
+          <a class="btn btn-dark" id="mapsLink" href="#" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn btn-line" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+        <p class="visit-note reveal">Bulk orders for weddings, corporate Eid boxes or a hospital visit? Message the team and we'll plan it with you.</p>
+      </div>
+      <div class="map reveal">
+        <div class="map-fallback">
+          <span class="map-pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+          </span>
+          <p id="mapFallbackName">U Dir Hadiyad</p>
+          <address id="mapFallbackAddress">Makka Al Mukarama Road, Hodan<br>Mogadishu, Somalia</address>
+          <small>Open in Maps for directions</small>
+        </div>
+        <iframe id="mapFrame" title="Map to U Dir Hadiyad" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-top">
+    <div class="foot-brand">
+      <span class="brand-mark" id="footInitial">H</span>
+      <p id="footName">U Dir Hadiyad</p>
+      <span id="footTag">From anywhere. To the people you love.</span>
+    </div>
+    <div class="foot-links">
+      <a href="#gifts">Gifts</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#areas">Delivery areas</a>
+      <a href="#track">Track an order</a>
+      <a href="credits.html">Photo credits</a>
+    </div>
+    <div class="foot-contact">
+      <a id="footWa" href="#">WhatsApp</a>
+      <a id="footPhone" href="tel:+252610000000">+252 61 000 0000</a>
+      <a id="footEmail" href="mailto:hello@hadiyad.so">hello@hadiyad.so</a>
+      <p id="footHours">Deliveries daily · 8:00 – 20:00</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="year">2026</span> <span id="footBrand">U Dir Hadiyad</span>. Mogadishu, Somalia.</span>
+    <span>Gift photos under CC licences — see <a href="credits.html">credits</a>.</span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="cart" id="cart" aria-hidden="true" aria-label="Your gift box">
+  <header class="cart-head">
+    <div>
+      <p class="eyebrow"><i></i><span>Your order</span></p>
+      <h2>Gift box</h2>
+    </div>
+    <button class="icon-btn" id="cartClose" aria-label="Close gift box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+    </button>
+  </header>
+  <div class="cart-body" id="cartBody"></div>
+  <footer class="cart-foot">
+    <div class="cart-lines">
+      <span>Subtotal</span><b id="cartSubtotal">$0.00</b>
+    </div>
+    <div class="cart-lines muted">
+      <span>Delivery</span><b id="cartDelivery">from $2</b>
+    </div>
+    <p class="cart-hint" id="cartHint"></p>
+    <button class="btn btn-rose btn-block" id="checkoutBtn" disabled>Checkout</button>
+    <p class="cart-fine">Pay by card link or EVC. We confirm every order by phone.</p>
+  </footer>
+</aside>
+
+<div class="modal" id="checkoutModal" hidden role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+  <div class="modal-card">
+    <button class="icon-btn modal-close" id="modalClose" aria-label="Close checkout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+    </button>
+
+    <div id="checkoutFormView">
+      <p class="eyebrow"><i></i><span>Checkout</span></p>
+      <h2 id="checkoutTitle">Who is it for?</h2>
+
+      <form id="checkoutForm" novalidate>
+        <fieldset class="choice block">
+          <legend>You (the sender)</legend>
+          <div class="field-row">
+            <label class="field">
+              <span>Your name</span>
+              <input name="senderName" id="senderName" type="text" autocomplete="name" placeholder="As it should appear on the card" required>
+            </label>
+            <label class="field">
+              <span>Your WhatsApp</span>
+              <input name="senderPhone" id="senderPhone" type="tel" autocomplete="tel" placeholder="+1 202 555 0143" required>
+            </label>
+          </div>
+          <label class="field">
+            <span>Email <small>(optional — for the receipt)</small></span>
+            <input name="senderEmail" id="senderEmail" type="email" autocomplete="email" placeholder="you@email.com">
+          </label>
+        </fieldset>
+
+        <fieldset class="choice block">
+          <legend>Recipient in Mogadishu</legend>
+          <div class="field-row">
+            <label class="field">
+              <span>Their name</span>
+              <input name="recName" id="recName" type="text" autocomplete="name" placeholder="Hodan Ali" required>
+            </label>
+            <label class="field">
+              <span>Their phone</span>
+              <input name="recPhone" id="recPhone" type="tel" autocomplete="tel" placeholder="+252 61 …" required>
+            </label>
+          </div>
+          <div class="field-row">
+            <label class="field">
+              <span>Delivery area</span>
+              <select name="recZone" id="recZone" required></select>
+            </label>
+            <label class="field">
+              <span>Landmark / street</span>
+              <input name="recAddress" id="recAddress" type="text" placeholder="Blue gate opposite Al-Nur Mosque" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="choice block">
+          <legend>When should it arrive?</legend>
+          <div class="field-row">
+            <label class="field">
+              <span>Date</span>
+              <input name="deliveryDate" id="deliveryDate" type="date" required>
+            </label>
+            <div class="slot-picker" id="slotPicker" role="radiogroup" aria-label="Delivery window"></div>
+          </div>
+        </fieldset>
+
+        <label class="field block">
+          <span>Message on the card</span>
+          <textarea name="giftMessage" id="giftMessage" rows="3" maxlength="240" placeholder="Happy birthday hooyo. Wish I was there to hug you."></textarea>
+          <small class="counter" id="msgCounter">0 / 240</small>
+        </label>
+
+        <label class="check block">
+          <input type="checkbox" id="anonymous" name="anonymous">
+          <span>Hide my name — sign the card "From your family" instead.</span>
+        </label>
+
+        <fieldset class="choice block">
+          <legend>Payment</legend>
+          <div class="choice-row">
+            <label class="choice-opt">
+              <input type="radio" name="payment" value="card" checked>
+              <span><b>Card link</b><small>We send a secure link on WhatsApp</small></span>
+            </label>
+            <label class="choice-opt">
+              <input type="radio" name="payment" value="evc">
+              <span><b>EVC Plus</b><small>Someone local pays on your behalf</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="field block">
+          <span>Note for the team <small>(optional)</small></span>
+          <input name="note" id="noteField" type="text" maxlength="160" placeholder="Call before arriving, the gate is on the side street">
+        </label>
+
+        <div class="summary" id="checkoutSummary"></div>
+        <p class="form-error" id="formError" hidden></p>
+        <button class="btn btn-rose btn-block btn-lg" type="submit" id="placeOrderBtn">Place order</button>
+        <p class="fine">No payment is taken on this page. We confirm the order and send the payment link first.</p>
+      </form>
+    </div>
+
+    <div id="successView" hidden>
+      <p class="eyebrow"><i></i><span>Order received</span></p>
+      <h2 id="successTitle">Thank you, <span id="successName">Amina</span>.</h2>
+      <p class="success-lead" id="successLead"></p>
+
+      <div class="ticket">
+        <div class="ticket-top">
+          <span>Order</span>
+          <b id="successId">H-1001</b>
+        </div>
+        <div class="ticket-rows" id="successRows"></div>
+        <div class="ticket-total">
+          <span>Total</span>
+          <b id="successTotal">$0.00</b>
+        </div>
+      </div>
+
+      <div class="pay-box" id="payBox"></div>
+      <p class="fine" id="successFine"></p>
+
+      <div class="success-actions">
+        <a class="btn btn-rose" id="successWa" href="#" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        <button class="btn btn-line" type="button" id="successTrack">Track this order</button>
+        <button class="btn btn-ghost" type="button" id="newOrderBtn">Send another gift</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="mobile-bar" id="mobileBar" hidden>
+  <span><b id="mobileBarCount">0 items</b> · <span id="mobileBarTotal">$0.00</span></span>
+  <span class="bar-cta">Review gift box</span>
+</button>
+
+<p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
